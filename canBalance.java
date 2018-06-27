@@ -18,12 +18,8 @@ public boolean canBalance(int[] nums) {
   // start from either end, subtract the between them move the bigger one forward
   int diff = nums[start] - nums[end];
   
-  while(start <= end) {
+  while(start < end) {
     
-    if(start == end) {
-      return diff == 0;
-    } 
-      
     diff = nums[start] - nums[end];
   
     // equal
@@ -45,5 +41,5 @@ public boolean canBalance(int[] nums) {
   }
   
   return diff == 0;
-  
+
 }
